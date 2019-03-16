@@ -7,20 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1AA461027BE98CF339E370 /* Pods_FrankenFruit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2214EA6D356C899E7C478FEF /* Pods_FrankenFruit.framework */; };
+		4621FB0A223C3C6A000AECEC /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4621FB09223C3C6A000AECEC /* EntityManager.swift */; };
+		4621FB0C223C3CD4000AECEC /* TapFlyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4621FB0B223C3CD4000AECEC /* TapFlyComponent.swift */; };
+		4621FB10223C3D2B000AECEC /* RenderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4621FB0F223C3D2B000AECEC /* RenderComponent.swift */; };
+		4667EB01223C3EE500878749 /* PlayerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667EB00223C3EE500878749 /* PlayerEntity.swift */; };
+		4667EB03223C406D00878749 /* InputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667EB02223C406D00878749 /* InputComponent.swift */; };
+		4667EB06223C560A00878749 /* PhysicsComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667EB05223C560A00878749 /* PhysicsComponent.swift */; };
+		4667EB09223C575500878749 /* ColliderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667EB08223C575500878749 /* ColliderTypes.swift */; };
+		4667EB0B223C784C00878749 /* BackgroundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667EB0A223C784C00878749 /* BackgroundEntity.swift */; };
+		46B2287B223D45D300151B74 /* SlideComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2287A223D45D300151B74 /* SlideComponent.swift */; };
+		46B2287D223D467400151B74 /* StateMachineComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2287C223D467400151B74 /* StateMachineComponent.swift */; };
+		46B22880223D46FC00151B74 /* SlideState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2287F223D46FC00151B74 /* SlideState.swift */; };
+		46B22882223D4FFD00151B74 /* StationaryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B22881223D4FFD00151B74 /* StationaryState.swift */; };
+		46B22884223D607000151B74 /* SlantedWallEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B22883223D607000151B74 /* SlantedWallEntity.swift */; };
+		46B22886223D85A300151B74 /* SlantedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B22885223D85A300151B74 /* SlantedEntity.swift */; };
 		46B99B77223C165700EE4896 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B99B76223C165700EE4896 /* AppDelegate.swift */; };
-		46B99B79223C165700EE4896 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 46B99B78223C165700EE4896 /* GameScene.sks */; };
 		46B99B7B223C165700EE4896 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 46B99B7A223C165700EE4896 /* Actions.sks */; };
 		46B99B7D223C165700EE4896 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B99B7C223C165700EE4896 /* GameScene.swift */; };
 		46B99B7F223C165700EE4896 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B99B7E223C165700EE4896 /* GameViewController.swift */; };
 		46B99B82223C165700EE4896 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B99B80223C165700EE4896 /* Main.storyboard */; };
 		46B99B84223C165800EE4896 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B99B83223C165800EE4896 /* Assets.xcassets */; };
 		46B99B87223C165800EE4896 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B99B85223C165800EE4896 /* LaunchScreen.storyboard */; };
+		46BA5330223D28C90000E3DE /* PathEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BA532F223D28C90000E3DE /* PathEntity.swift */; };
+		46BA5332223D2C0B0000E3DE /* ShapeRenderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BA5331223D2C0B0000E3DE /* ShapeRenderComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2214EA6D356C899E7C478FEF /* Pods_FrankenFruit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrankenFruit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4621FB09223C3C6A000AECEC /* EntityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
+		4621FB0B223C3CD4000AECEC /* TapFlyComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapFlyComponent.swift; sourceTree = "<group>"; };
+		4621FB0F223C3D2B000AECEC /* RenderComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderComponent.swift; sourceTree = "<group>"; };
+		4667EB00223C3EE500878749 /* PlayerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEntity.swift; sourceTree = "<group>"; };
+		4667EB02223C406D00878749 /* InputComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputComponent.swift; sourceTree = "<group>"; };
+		4667EB05223C560A00878749 /* PhysicsComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhysicsComponent.swift; path = /Users/jonahkornberg/Documents/Coding/FrankenFruit/FrankenFruit/Components/PhysicsComponent.swift; sourceTree = "<absolute>"; };
+		4667EB08223C575500878749 /* ColliderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColliderTypes.swift; sourceTree = "<group>"; };
+		4667EB0A223C784C00878749 /* BackgroundEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundEntity.swift; sourceTree = "<group>"; };
+		46B2287A223D45D300151B74 /* SlideComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideComponent.swift; sourceTree = "<group>"; };
+		46B2287C223D467400151B74 /* StateMachineComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachineComponent.swift; sourceTree = "<group>"; };
+		46B2287F223D46FC00151B74 /* SlideState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideState.swift; sourceTree = "<group>"; };
+		46B22881223D4FFD00151B74 /* StationaryState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationaryState.swift; sourceTree = "<group>"; };
+		46B22883223D607000151B74 /* SlantedWallEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlantedWallEntity.swift; sourceTree = "<group>"; };
+		46B22885223D85A300151B74 /* SlantedEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlantedEntity.swift; sourceTree = "<group>"; };
 		46B99B73223C165700EE4896 /* FrankenFruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrankenFruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B99B76223C165700EE4896 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		46B99B78223C165700EE4896 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		46B99B7A223C165700EE4896 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		46B99B7C223C165700EE4896 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		46B99B7E223C165700EE4896 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +58,11 @@
 		46B99B83223C165800EE4896 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46B99B86223C165800EE4896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46B99B88223C165800EE4896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46BA532F223D28C90000E3DE /* PathEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathEntity.swift; sourceTree = "<group>"; };
+		46BA5331223D2C0B0000E3DE /* ShapeRenderComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeRenderComponent.swift; sourceTree = "<group>"; };
+		46BA5333223D33920000E3DE /* PathTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PathTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		978CE54DF313C45181FC4B5D /* Pods-FrankenFruit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrankenFruit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FrankenFruit/Pods-FrankenFruit.debug.xcconfig"; sourceTree = "<group>"; };
+		B41E06D20A05A5C75A972D19 /* Pods-FrankenFruit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrankenFruit.release.xcconfig"; path = "Pods/Target Support Files/Pods-FrankenFruit/Pods-FrankenFruit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +70,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A1AA461027BE98CF339E370 /* Pods_FrankenFruit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4621FB0D223C3CDC000AECEC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4621FB09223C3C6A000AECEC /* EntityManager.swift */,
+				4667EB00223C3EE500878749 /* PlayerEntity.swift */,
+				4667EB0A223C784C00878749 /* BackgroundEntity.swift */,
+				46BA532F223D28C90000E3DE /* PathEntity.swift */,
+				46B22883223D607000151B74 /* SlantedWallEntity.swift */,
+				46B22885223D85A300151B74 /* SlantedEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		4621FB0E223C3CEA000AECEC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4667EB05223C560A00878749 /* PhysicsComponent.swift */,
+				4621FB0F223C3D2B000AECEC /* RenderComponent.swift */,
+				46BA5331223D2C0B0000E3DE /* ShapeRenderComponent.swift */,
+				4621FB0B223C3CD4000AECEC /* TapFlyComponent.swift */,
+				4667EB02223C406D00878749 /* InputComponent.swift */,
+				46B2287A223D45D300151B74 /* SlideComponent.swift */,
+				46B2287C223D467400151B74 /* StateMachineComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4667EB07223C573200878749 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				4667EB08223C575500878749 /* ColliderTypes.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		46B2287E223D46E100151B74 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				46B2287F223D46FC00151B74 /* SlideState.swift */,
+				46B22881223D4FFD00151B74 /* StationaryState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
 		46B99B6A223C165700EE4896 = {
 			isa = PBXGroup;
 			children = (
 				46B99B75223C165700EE4896 /* FrankenFruit */,
 				46B99B74223C165700EE4896 /* Products */,
+				A353D556F914767FF17B5854 /* Pods */,
+				81615FD741CBCEAACE81529A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,17 +142,38 @@
 		46B99B75223C165700EE4896 /* FrankenFruit */ = {
 			isa = PBXGroup;
 			children = (
-				46B99B76223C165700EE4896 /* AppDelegate.swift */,
-				46B99B78223C165700EE4896 /* GameScene.sks */,
-				46B99B7A223C165700EE4896 /* Actions.sks */,
-				46B99B7C223C165700EE4896 /* GameScene.swift */,
 				46B99B7E223C165700EE4896 /* GameViewController.swift */,
+				46B99B7C223C165700EE4896 /* GameScene.swift */,
+				46BA5333223D33920000E3DE /* PathTest.playground */,
+				4621FB0D223C3CDC000AECEC /* Entities */,
+				4621FB0E223C3CEA000AECEC /* Components */,
+				46B2287E223D46E100151B74 /* States */,
+				4667EB07223C573200878749 /* Enums */,
+				46B99B76223C165700EE4896 /* AppDelegate.swift */,
+				46B99B7A223C165700EE4896 /* Actions.sks */,
 				46B99B80223C165700EE4896 /* Main.storyboard */,
 				46B99B83223C165800EE4896 /* Assets.xcassets */,
 				46B99B85223C165800EE4896 /* LaunchScreen.storyboard */,
 				46B99B88223C165800EE4896 /* Info.plist */,
 			);
 			path = FrankenFruit;
+			sourceTree = "<group>";
+		};
+		81615FD741CBCEAACE81529A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2214EA6D356C899E7C478FEF /* Pods_FrankenFruit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A353D556F914767FF17B5854 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				978CE54DF313C45181FC4B5D /* Pods-FrankenFruit.debug.xcconfig */,
+				B41E06D20A05A5C75A972D19 /* Pods-FrankenFruit.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46B99B8B223C165800EE4896 /* Build configuration list for PBXNativeTarget "FrankenFruit" */;
 			buildPhases = (
+				7AB8743354A1B46D5B90A713 /* [CP] Check Pods Manifest.lock */,
 				46B99B6F223C165700EE4896 /* Sources */,
 				46B99B70223C165700EE4896 /* Frameworks */,
 				46B99B71223C165700EE4896 /* Resources */,
+				EFF740EC562A78624FF9DAB4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,7 +237,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				46B99B82223C165700EE4896 /* Main.storyboard in Resources */,
-				46B99B79223C165700EE4896 /* GameScene.sks in Resources */,
 				46B99B84223C165800EE4896 /* Assets.xcassets in Resources */,
 				46B99B87223C165800EE4896 /* LaunchScreen.storyboard in Resources */,
 				46B99B7B223C165700EE4896 /* Actions.sks in Resources */,
@@ -141,14 +245,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7AB8743354A1B46D5B90A713 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FrankenFruit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFF740EC562A78624FF9DAB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FrankenFruit/Pods-FrankenFruit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CGPathIntersection/CGPathIntersection.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CGPathIntersection.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FrankenFruit/Pods-FrankenFruit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		46B99B6F223C165700EE4896 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4621FB0C223C3CD4000AECEC /* TapFlyComponent.swift in Sources */,
 				46B99B7D223C165700EE4896 /* GameScene.swift in Sources */,
+				4667EB03223C406D00878749 /* InputComponent.swift in Sources */,
+				4667EB01223C3EE500878749 /* PlayerEntity.swift in Sources */,
+				46B22884223D607000151B74 /* SlantedWallEntity.swift in Sources */,
+				46B2287D223D467400151B74 /* StateMachineComponent.swift in Sources */,
+				4667EB06223C560A00878749 /* PhysicsComponent.swift in Sources */,
+				46BA5332223D2C0B0000E3DE /* ShapeRenderComponent.swift in Sources */,
+				46BA5330223D28C90000E3DE /* PathEntity.swift in Sources */,
+				46B22886223D85A300151B74 /* SlantedEntity.swift in Sources */,
+				46B2287B223D45D300151B74 /* SlideComponent.swift in Sources */,
 				46B99B7F223C165700EE4896 /* GameViewController.swift in Sources */,
+				4621FB0A223C3C6A000AECEC /* EntityManager.swift in Sources */,
+				4667EB09223C575500878749 /* ColliderTypes.swift in Sources */,
+				46B22882223D4FFD00151B74 /* StationaryState.swift in Sources */,
 				46B99B77223C165700EE4896 /* AppDelegate.swift in Sources */,
+				46B22880223D46FC00151B74 /* SlideState.swift in Sources */,
+				4667EB0B223C784C00878749 /* BackgroundEntity.swift in Sources */,
+				4621FB10223C3D2B000AECEC /* RenderComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +461,7 @@
 		};
 		46B99B8C223C165800EE4896 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 978CE54DF313C45181FC4B5D /* Pods-FrankenFruit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,12 +474,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jkornberg.FrankenFruit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		46B99B8D223C165800EE4896 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B41E06D20A05A5C75A972D19 /* Pods-FrankenFruit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -322,7 +493,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jkornberg.FrankenFruit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
