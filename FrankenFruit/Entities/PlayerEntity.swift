@@ -12,7 +12,7 @@ class PlayerEntity : GKEntity {
     
     override init(){
         super.init()
-        let renderComponent = RenderComponent(color: .blue, size: CGSize(width: 50, height: 30))
+        let renderComponent = RenderComponent(texture: SKTexture(imageNamed: "PlayerSprite"))
         self.addComponent(renderComponent)
     }
     

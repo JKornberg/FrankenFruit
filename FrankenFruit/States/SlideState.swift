@@ -10,8 +10,10 @@ import GameplayKit
 import SpriteKit
 class SlideState : GKState{
     unowned var entity : GKEntity
-    init(entity : GKEntity){
+    unowned var obstacleManager : ObstacleManager
+    init(entity : GKEntity, obstacleManager : ObstacleManager){
         self.entity = entity
+        self.obstacleManager = obstacleManager
         super.init()
     }
     
@@ -22,8 +24,16 @@ class SlideState : GKState{
     }
     
     override func update(deltaTime seconds: TimeInterval) {
-        guard let renderComponent = entity.component(ofType: RenderComponent.self) else {fatalError("attempting to slide non-rendered object")}
-        renderComponent.node.position.x -= 2
+        if let renderComponent = entity.component(ofType: RenderComponent.self){
+            renderComponent.node.position.x -= obstacleManager.gameplayConfiguration.speed
+        }
+        else if let shapeRenderComponent = entity.component(ofType: ShapeRenderComponent.self){
+            shapeRenderComponent.node.position.x -= obstacleManager.gameplayConfiguration.speed
+        } else if let path = entity as? PathEntity{
+            for shape in path.shapeArray{
+                shape.position.x -= obstacleManager.gameplayConfiguration.speed
+            }
+        }
     }
     
 }

@@ -9,15 +9,18 @@
 import GameplayKit
 import SpriteKit
 class EntityManager {
-    var scene : SKScene
+    unowned var scene : SKScene
     var entities = Set<GKEntity>()
     var toRemove = Set<GKEntity>()
+    
     lazy var componentSystems : [GKComponentSystem] = {
         let stateMachineSystem = GKComponentSystem(componentClass: StateMachineComponent.self)
-        return [stateMachineSystem]
+        let removeEntitySystem = GKComponentSystem(componentClass: RemoveEntity.self)
+
+        return [stateMachineSystem, removeEntitySystem]
     }()
     
-    init(scene: SKScene){
+    init(scene : SKScene){
         self.scene = scene
     }
     
@@ -53,6 +56,7 @@ class EntityManager {
     }
     
     func update(_ deltaTime: CFTimeInterval){
+        
         for componentSystem in componentSystems{
             componentSystem.update(deltaTime: deltaTime)
         }

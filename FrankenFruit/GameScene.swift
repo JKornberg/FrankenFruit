@@ -9,40 +9,37 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene, SKPhysicsContactDelegate {
+class GameScene: SKScene {
     
     var entityManager : EntityManager!
+    var obstacleManager : ObstacleManager!
     let playerEntity = PlayerEntity()
 
     private var lastUpdateTime : TimeInterval = 0
     
     override func sceneDidLoad() {
-        entityManager = EntityManager(scene: self)
+        entityManager = EntityManager(scene : self )
+        obstacleManager = ObstacleManager(entityManager: entityManager)
+
         self.lastUpdateTime = 0
 
     }
     
     override func didMove(to view: SKView) {
-        self.physicsWorld.contactDelegate = self
+        self.physicsWorld.contactDelegate = obstacleManager
         let cameraXOffset = abs((self.frame.width - (UIScreen.main.bounds.width * self.frame.height / UIScreen.main.bounds.height) ) / 2) + self.frame.width/2
         createCamera(cameraXOffset : cameraXOffset)
-        let background = BackgroundEntity(bgImage: UIImage(named: "CrossedDemoBg")!, scene: self)
+        let background = BackgroundEntity(bgImage: UIImage(named: "FarBg")!, scene: self, obstacleManager: obstacleManager)
         entityManager.add(background)
-        let pathEntity = PathEntity(scene: self)
-        entityManager.add(pathEntity)
-        
+        let player = PlayerEntity()
+        let playerNode = player.component(ofType: RenderComponent.self)
+        playerNode!.node.position = CGPoint(x: self.frame.width-500, y: self.frame.midY)
+        entityManager.add(player)
         //Slanted obstacle demo
 //        let slantedObstacle = SlantedWallEntity(angle: CGFloat.pi/6)
 //        slantedObstacle.node.position = CGPoint(x: 400, y: self.frame.midY)
 //        entityManager.add(slantedObstacle)
 //        print("Frame width: \(self.frame.width)")
-        let slantedObstacle = SlantedEntity(angle: CGFloat.pi/6)
-        slantedObstacle.node.position = CGPoint(x: 812-100, y: self.frame.midY)
-        entityManager.add(slantedObstacle)
-        print("Intersects: \(slantedObstacle.node.intersects(pathEntity.shapeNode))")
-        print(slantedObstacle.node.frame.size)
-        print(slantedObstacle.node.zRotation)
-        print("Frame width: \(self.frame.width)")
 
     }
     
@@ -51,6 +48,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         super.update(currentTime)
         let deltaTime = currentTime - lastUpdateTime
         entityManager.update(deltaTime)
+        obstacleManager.update(deltaTime: deltaTime)
         lastUpdateTime = currentTime
     }
     

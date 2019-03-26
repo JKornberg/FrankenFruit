@@ -3,17 +3,32 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/jonahkornberg/Documents/Coding/FrankenFruit/FrankenFruit/PathTest.playground#CharacterRangeLen=1&amp;CharacterRangeLoc=2225&amp;EndingColumnNumber=0&amp;EndingLineNumber=70&amp;StartingColumnNumber=0&amp;StartingLineNumber=69&amp;Timestamp=574457155.655533"
+         documentLocation = "file:///Users/jonahkornberg/Documents/Coding/FrankenFruit/FrankenFruit/PathTest.playground#CharacterRangeLen=3524&amp;CharacterRangeLoc=103&amp;EndingColumnNumber=0&amp;EndingLineNumber=109&amp;StartingColumnNumber=0&amp;StartingLineNumber=7&amp;Timestamp=575227330.1299649"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/jonahkornberg/Documents/Coding/FrankenFruit/FrankenFruit/PathTest.playground#CharacterRangeLen=4&amp;CharacterRangeLoc=2158&amp;EndingColumnNumber=9&amp;EndingLineNumber=68&amp;StartingColumnNumber=5&amp;StartingLineNumber=68&amp;Timestamp=574457155.655642"
+         documentLocation = "file:///Users/jonahkornberg/Documents/Coding/FrankenFruit/FrankenFruit/PathTest.playground#CharacterRangeLen=3523&amp;CharacterRangeLoc=103&amp;EndingColumnNumber=0&amp;EndingLineNumber=108&amp;StartingColumnNumber=0&amp;StartingLineNumber=7&amp;Timestamp=575227330.1300859"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/jonahkornberg/Documents/Coding/FrankenFruit/FrankenFruit/PathTest.playground#CharacterRangeLen=0&amp;CharacterRangeLoc=2225&amp;EndingColumnNumber=0&amp;EndingLineNumber=69&amp;StartingColumnNumber=0&amp;StartingLineNumber=69&amp;Timestamp=574457155.655726"
+         documentLocation = "file:///Users/jonahkornberg/Documents/Coding/FrankenFruit/FrankenFruit/PathTest.playground#CharacterRangeLen=3523&amp;CharacterRangeLoc=103&amp;EndingColumnNumber=0&amp;EndingLineNumber=108&amp;StartingColumnNumber=0&amp;StartingLineNumber=7&amp;Timestamp=575227330.13018"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/jonahkornberg/Documents/Coding/FrankenFruit/FrankenFruit/PathTest.playground#CharacterRangeLen=4&amp;CharacterRangeLoc=2302&amp;EndingColumnNumber=9&amp;EndingLineNumber=71&amp;StartingColumnNumber=5&amp;StartingLineNumber=71&amp;Timestamp=575227330.13027"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/jonahkornberg/Documents/Coding/FrankenFruit/FrankenFruit/PathTest.playground#CharacterRangeLen=6&amp;CharacterRangeLoc=3559&amp;EndingColumnNumber=11&amp;EndingLineNumber=107&amp;StartingColumnNumber=5&amp;StartingLineNumber=107&amp;Timestamp=575227330.130362"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/jonahkornberg/Documents/Coding/FrankenFruit/FrankenFruit/PathTest.playground#CharacterRangeLen=72&amp;CharacterRangeLoc=3554&amp;EndingColumnNumber=0&amp;EndingLineNumber=108&amp;StartingColumnNumber=0&amp;StartingLineNumber=107&amp;Timestamp=575227330.130451"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>

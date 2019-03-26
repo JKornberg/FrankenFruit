@@ -19,6 +19,7 @@ class ShapeRenderComponent : GKComponent {
         if let color = color{
             node.fillColor = color
         }
+        node.zPosition = 10
     }
     
     required init?(coder aDecoder: NSCoder) {

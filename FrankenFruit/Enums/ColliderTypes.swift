@@ -16,4 +16,6 @@ enum ColliderType : UInt32{
     case Coin = 0b00001000
     case Boundary = 0b00010000
     case BirdCollide = 0b00010100
+    case Path = 0b00100000
+    case pathCollide = 0b01000000
 }
