@@ -26,34 +26,30 @@ class CGPathEntity : GKEntity{
         super.init()
         let path = CGMutablePath()
         path.move(to: CGPoint(x: genX, y: obstacleManager.scene.frame.midY))
-        path.addLine(to: CGPoint(x: genX * 3, y: obstacleManager.scene.frame.midY))
+        path.addLine(to: CGPoint(x: genX * 2, y: obstacleManager.scene.frame.midY))
         let strokedPath = path.copy(strokingWithWidth: 40, lineCap: .butt, lineJoin: .miter, miterLimit: 10)
         let strokedMutable = strokedPath.mutableCopy()
         currentPath = strokedMutable
         
-        
-        let shapeComponent = ShapeRenderComponent(shapeNode: SKShapeNode(path: strokedPath), color: .black)
-        let removeEntityComponent = RemoveEntity(node: shapeComponent.node, obstacleManager: obstacleManager)
-        let stateMachine = StateMachineComponent(states: [SlideState(entity: self, obstacleManager: obstacleManager)])
-        addComponent(shapeComponent)
-        addComponent(stateMachine)
-        stateMachine.enterInitialState()
-    }
+        }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) not implemented")
+        
     }
     
     func updateCg(buffered : Bool? = false){
         print("started")
-        let randomComponent = obstacleManager.randomComponent
-        let newPath = CGMutablePath()
-        let genX = obstacleManager.scene.frame.width * 1.25
-        newPath.move(to: CGPoint(x: genX, y: endOfPathY))
-        var pathLength : CGFloat = 0
+        currentPath!.move(to: CGPoint(x: 0, y: startOfPathY))
         startOfPathY = endOfPathY
+        previousPath = currentPath!
+        currentPath = CGMutablePath()
+        let randomComponent = obstacleManager.randomComponent
+        let genX = obstacleManager.scene.frame.width * 1.25
+        currentPath!.move(to: CGPoint(x: genX, y: endOfPathY))
+        var pathLength : CGFloat = 0
         while(pathLength < genX){
-            var newPointX = randomComponent.randomIn(obstacleManager.gameplayConfiguration.segmentWidth.lower, obstacleManager.gameplayConfiguration.segmentWidth.upper) + pathLength
+            var newPointX = randomComponent.randomIn(Int(obstacleManager.gameplayConfiguration.segmentWidth.lower), Int(obstacleManager.gameplayConfiguration.segmentWidth.upper)) + pathLength
             if newPointX > genX{
                 newPointX = genX
             }
@@ -67,15 +63,12 @@ class CGPathEntity : GKEntity{
                 newPointY = 40
             }
             let newPoint = CGPoint(x: newPointX, y: newPointY)
-            newPath.addLine(to: newPoint)
+            currentPath!.addLine(to: newPoint)
             endOfPathY = newPointY
             pathLength = newPointX
-            
         }
-        let strokedPath = newPath.copy(strokingWithWidth: 80, lineCap: .butt, lineJoin: .miter, miterLimit: 10)
+        let strokedPath = currentPath!.copy(strokingWithWidth: 80, lineCap: .butt, lineJoin: .miter, miterLimit: 10)
         let strokedMutable = strokedPath.mutableCopy()
-        currentPath!.move(to: CGPoint(x: 0, y: startOfPathY))
-        previousPath = currentPath
         currentPath = strokedMutable
     }
 }

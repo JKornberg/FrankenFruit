@@ -11,11 +11,21 @@ import SpriteKit
 class SlideState : GKState{
     unowned var entity : GKEntity
     unowned var obstacleManager : ObstacleManager
+    var nodes : [SKSpriteNode]?
+    
     init(entity : GKEntity, obstacleManager : ObstacleManager){
         self.entity = entity
         self.obstacleManager = obstacleManager
         super.init()
     }
+    
+    init(entity : GKEntity, obstacleManager : ObstacleManager, nodes : [SKSpriteNode]){
+        self.entity = entity
+        self.obstacleManager = obstacleManager
+        self.nodes = nodes
+        super.init()
+    }
+
     
     override func didEnter(from previousState: GKState?) {
         if let physicsComponent = entity.component(ofType: PhysicsComponent.self){
@@ -29,9 +39,9 @@ class SlideState : GKState{
         }
         else if let shapeRenderComponent = entity.component(ofType: ShapeRenderComponent.self){
             shapeRenderComponent.node.position.x -= obstacleManager.gameplayConfiguration.speed
-        } else if let path = entity as? PathEntity{
-            for shape in path.shapeArray{
-                shape.position.x -= obstacleManager.gameplayConfiguration.speed
+        } else if let nodes = self.nodes{
+            for node in nodes{
+                node.position.x -= obstacleManager.gameplayConfiguration.speed
             }
         }
     }

@@ -11,6 +11,9 @@
 		4621FB0A223C3C6A000AECEC /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4621FB09223C3C6A000AECEC /* EntityManager.swift */; };
 		4621FB0C223C3CD4000AECEC /* TapFlyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4621FB0B223C3CD4000AECEC /* TapFlyComponent.swift */; };
 		4621FB10223C3D2B000AECEC /* RenderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4621FB0F223C3D2B000AECEC /* RenderComponent.swift */; };
+		462C89A2224BD1E6004755B6 /* SAT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462C89A1224BD1E6004755B6 /* SAT.swift */; };
+		462C89A4224BD299004755B6 /* SATPathEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462C89A3224BD299004755B6 /* SATPathEntity.swift */; };
+		463FA635224BCAFA009E0C5A /* SASwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463FA634224BCAFA009E0C5A /* SASwift.swift */; };
 		4662F2B1223F1BFB00BD0064 /* RemoveEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4662F2B0223F1BFB00BD0064 /* RemoveEntity.swift */; };
 		4667EB01223C3EE500878749 /* PlayerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667EB00223C3EE500878749 /* PlayerEntity.swift */; };
 		4667EB03223C406D00878749 /* InputComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667EB02223C406D00878749 /* InputComponent.swift */; };
@@ -18,9 +21,8 @@
 		4667EB09223C575500878749 /* ColliderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667EB08223C575500878749 /* ColliderTypes.swift */; };
 		4667EB0B223C784C00878749 /* BackgroundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4667EB0A223C784C00878749 /* BackgroundEntity.swift */; };
 		466B77D5223ED454003773E9 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466B77D4223ED453003773E9 /* DataStructures.swift */; };
-		466BBC0022485A5A001C9BB3 /* CGPathEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466BBBFF22485A5A001C9BB3 /* CGPathEntity.swift */; };
 		466CBD67223DD917009E607E /* ObstacleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CBD66223DD917009E607E /* ObstacleManager.swift */; };
-		4671A77522494DB6004044AC /* ShapePathEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671A77422494DB6004044AC /* ShapePathEntity.swift */; };
+		4672C799224D5B440074CDE4 /* UpdateBackgroundComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4672C798224D5B440074CDE4 /* UpdateBackgroundComponent.swift */; };
 		46772E9522403129006325C4 /* ObstacleBufferComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46772E9422403129006325C4 /* ObstacleBufferComponent.swift */; };
 		46B2287D223D467400151B74 /* StateMachineComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2287C223D467400151B74 /* StateMachineComponent.swift */; };
 		46B22880223D46FC00151B74 /* SlideState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B2287F223D46FC00151B74 /* SlideState.swift */; };
@@ -33,10 +35,11 @@
 		46B99B82223C165700EE4896 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B99B80223C165700EE4896 /* Main.storyboard */; };
 		46B99B84223C165800EE4896 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B99B83223C165800EE4896 /* Assets.xcassets */; };
 		46B99B87223C165800EE4896 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B99B85223C165800EE4896 /* LaunchScreen.storyboard */; };
-		46BA5330223D28C90000E3DE /* PathEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BA532F223D28C90000E3DE /* PathEntity.swift */; };
 		46BA5332223D2C0B0000E3DE /* ShapeRenderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BA5331223D2C0B0000E3DE /* ShapeRenderComponent.swift */; };
 		46C291F82246C8F700F3354B /* BlockEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C291F72246C8F700F3354B /* BlockEntity.swift */; };
 		46C291FA2246CAB000F3354B /* ObstacleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C291F92246CAB000F3354B /* ObstacleEntity.swift */; };
+		46EFC6A92253CBAF00E3FB59 /* CameraEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFC6A82253CBAF00E3FB59 /* CameraEntity.swift */; };
+		46EFC6AD2256601500E3FB59 /* SpawnObstacleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EFC6AC2256601500E3FB59 /* SpawnObstacleState.swift */; };
 		46F598B12242C9C1001BB593 /* RandomComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F598B02242C9C1001BB593 /* RandomComponent.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,10 @@
 		4621FB09223C3C6A000AECEC /* EntityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		4621FB0B223C3CD4000AECEC /* TapFlyComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapFlyComponent.swift; sourceTree = "<group>"; };
 		4621FB0F223C3D2B000AECEC /* RenderComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderComponent.swift; sourceTree = "<group>"; };
+		462C89A1224BD1E6004755B6 /* SAT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAT.swift; sourceTree = "<group>"; };
+		462C89A3224BD299004755B6 /* SATPathEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATPathEntity.swift; sourceTree = "<group>"; };
+		4636A810224AF2C000097917 /* PathTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PathTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		463FA634224BCAFA009E0C5A /* SASwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SASwift.swift; sourceTree = "<group>"; };
 		4662F2B0223F1BFB00BD0064 /* RemoveEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveEntity.swift; sourceTree = "<group>"; };
 		4667EB00223C3EE500878749 /* PlayerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEntity.swift; sourceTree = "<group>"; };
 		4667EB02223C406D00878749 /* InputComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputComponent.swift; sourceTree = "<group>"; };
@@ -52,9 +59,8 @@
 		4667EB08223C575500878749 /* ColliderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColliderTypes.swift; sourceTree = "<group>"; };
 		4667EB0A223C784C00878749 /* BackgroundEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundEntity.swift; sourceTree = "<group>"; };
 		466B77D4223ED453003773E9 /* DataStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
-		466BBBFF22485A5A001C9BB3 /* CGPathEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPathEntity.swift; sourceTree = "<group>"; };
 		466CBD66223DD917009E607E /* ObstacleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObstacleManager.swift; sourceTree = "<group>"; };
-		4671A77422494DB6004044AC /* ShapePathEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapePathEntity.swift; sourceTree = "<group>"; };
+		4672C798224D5B440074CDE4 /* UpdateBackgroundComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UpdateBackgroundComponent.swift; path = FrankenFruit/Components/UpdateBackgroundComponent.swift; sourceTree = SOURCE_ROOT; };
 		46772E9422403129006325C4 /* ObstacleBufferComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObstacleBufferComponent.swift; sourceTree = "<group>"; };
 		46B2287C223D467400151B74 /* StateMachineComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachineComponent.swift; sourceTree = "<group>"; };
 		46B2287F223D46FC00151B74 /* SlideState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideState.swift; sourceTree = "<group>"; };
@@ -69,10 +75,11 @@
 		46B99B83223C165800EE4896 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46B99B86223C165800EE4896 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46B99B88223C165800EE4896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46BA532F223D28C90000E3DE /* PathEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathEntity.swift; sourceTree = "<group>"; };
 		46BA5331223D2C0B0000E3DE /* ShapeRenderComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeRenderComponent.swift; sourceTree = "<group>"; };
 		46C291F72246C8F700F3354B /* BlockEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockEntity.swift; sourceTree = "<group>"; };
 		46C291F92246CAB000F3354B /* ObstacleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObstacleEntity.swift; sourceTree = "<group>"; };
+		46EFC6A82253CBAF00E3FB59 /* CameraEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraEntity.swift; sourceTree = "<group>"; };
+		46EFC6AC2256601500E3FB59 /* SpawnObstacleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawnObstacleState.swift; sourceTree = "<group>"; };
 		46F598B02242C9C1001BB593 /* RandomComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomComponent.swift; sourceTree = "<group>"; };
 		978CE54DF313C45181FC4B5D /* Pods-FrankenFruit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrankenFruit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FrankenFruit/Pods-FrankenFruit.debug.xcconfig"; sourceTree = "<group>"; };
 		B41E06D20A05A5C75A972D19 /* Pods-FrankenFruit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrankenFruit.release.xcconfig"; path = "Pods/Target Support Files/Pods-FrankenFruit/Pods-FrankenFruit.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,14 +102,13 @@
 			children = (
 				4621FB09223C3C6A000AECEC /* EntityManager.swift */,
 				466CBD66223DD917009E607E /* ObstacleManager.swift */,
-				4671A77422494DB6004044AC /* ShapePathEntity.swift */,
-				46BA532F223D28C90000E3DE /* PathEntity.swift */,
-				466BBBFF22485A5A001C9BB3 /* CGPathEntity.swift */,
-				4667EB00223C3EE500878749 /* PlayerEntity.swift */,
+				462C89A3224BD299004755B6 /* SATPathEntity.swift */,
 				4667EB0A223C784C00878749 /* BackgroundEntity.swift */,
+				4667EB00223C3EE500878749 /* PlayerEntity.swift */,
 				46B22885223D85A300151B74 /* SlantedEntity.swift */,
 				46C291F72246C8F700F3354B /* BlockEntity.swift */,
 				46C291F92246CAB000F3354B /* ObstacleEntity.swift */,
+				46EFC6A82253CBAF00E3FB59 /* CameraEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -110,6 +116,7 @@
 		4621FB0E223C3CEA000AECEC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4672C798224D5B440074CDE4 /* UpdateBackgroundComponent.swift */,
 				4667EB05223C560A00878749 /* PhysicsComponent.swift */,
 				4621FB0F223C3D2B000AECEC /* RenderComponent.swift */,
 				4662F2B0223F1BFB00BD0064 /* RemoveEntity.swift */,
@@ -136,6 +143,7 @@
 			children = (
 				46B2287F223D46FC00151B74 /* SlideState.swift */,
 				46B22881223D4FFD00151B74 /* StationaryState.swift */,
+				46EFC6AC2256601500E3FB59 /* SpawnObstacleState.swift */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -161,6 +169,9 @@
 		46B99B75223C165700EE4896 /* FrankenFruit */ = {
 			isa = PBXGroup;
 			children = (
+				4636A810224AF2C000097917 /* PathTest.playground */,
+				463FA634224BCAFA009E0C5A /* SASwift.swift */,
+				462C89A1224BD1E6004755B6 /* SAT.swift */,
 				466B77D4223ED453003773E9 /* DataStructures.swift */,
 				46B99B7E223C165700EE4896 /* GameViewController.swift */,
 				46B99B7C223C165700EE4896 /* GameScene.swift */,
@@ -229,6 +240,7 @@
 				TargetAttributes = {
 					46B99B72223C165700EE4896 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -322,28 +334,31 @@
 				466B77D5223ED454003773E9 /* DataStructures.swift in Sources */,
 				46B99B7D223C165700EE4896 /* GameScene.swift in Sources */,
 				4667EB03223C406D00878749 /* InputComponent.swift in Sources */,
+				462C89A2224BD1E6004755B6 /* SAT.swift in Sources */,
 				46C291F82246C8F700F3354B /* BlockEntity.swift in Sources */,
 				4667EB01223C3EE500878749 /* PlayerEntity.swift in Sources */,
 				46772E9522403129006325C4 /* ObstacleBufferComponent.swift in Sources */,
+				463FA635224BCAFA009E0C5A /* SASwift.swift in Sources */,
+				4672C799224D5B440074CDE4 /* UpdateBackgroundComponent.swift in Sources */,
 				46B2287D223D467400151B74 /* StateMachineComponent.swift in Sources */,
 				466CBD67223DD917009E607E /* ObstacleManager.swift in Sources */,
 				4667EB06223C560A00878749 /* PhysicsComponent.swift in Sources */,
 				46BA5332223D2C0B0000E3DE /* ShapeRenderComponent.swift in Sources */,
-				46BA5330223D28C90000E3DE /* PathEntity.swift in Sources */,
 				46B22886223D85A300151B74 /* SlantedEntity.swift in Sources */,
 				46B99B7F223C165700EE4896 /* GameViewController.swift in Sources */,
 				4621FB0A223C3C6A000AECEC /* EntityManager.swift in Sources */,
 				4667EB09223C575500878749 /* ColliderTypes.swift in Sources */,
 				46B22882223D4FFD00151B74 /* StationaryState.swift in Sources */,
-				466BBC0022485A5A001C9BB3 /* CGPathEntity.swift in Sources */,
 				46C291FA2246CAB000F3354B /* ObstacleEntity.swift in Sources */,
+				462C89A4224BD299004755B6 /* SATPathEntity.swift in Sources */,
 				46F598B12242C9C1001BB593 /* RandomComponent.swift in Sources */,
 				46B99B77223C165700EE4896 /* AppDelegate.swift in Sources */,
 				4662F2B1223F1BFB00BD0064 /* RemoveEntity.swift in Sources */,
 				46B22880223D46FC00151B74 /* SlideState.swift in Sources */,
 				4667EB0B223C784C00878749 /* BackgroundEntity.swift in Sources */,
+				46EFC6A92253CBAF00E3FB59 /* CameraEntity.swift in Sources */,
 				4621FB10223C3D2B000AECEC /* RenderComponent.swift in Sources */,
-				4671A77522494DB6004044AC /* ShapePathEntity.swift in Sources */,
+				46EFC6AD2256601500E3FB59 /* SpawnObstacleState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +514,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jkornberg.FrankenFruit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -518,7 +533,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jkornberg.FrankenFruit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

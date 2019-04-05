@@ -29,13 +29,16 @@ class EntityManager {
         if let spriteNode = entity.component(ofType: RenderComponent.self){
             scene.addChild(spriteNode.node)
         }
-        if let shapeNode = entity.component(ofType: ShapeRenderComponent.self){
+        else if let shapeNode = entity.component(ofType: ShapeRenderComponent.self){
             scene.addChild(shapeNode.node)
         }
-        
+        else if let cam = entity as? CameraEntity {
+            scene.addChild(cam.camera)
+        }
         for componentSystem in componentSystems{
             componentSystem.addComponent(foundIn: entity)
         }
+        
     }
     
     func remove(_ entity: GKEntity){
@@ -55,11 +58,21 @@ class EntityManager {
         return nil
     }
     
+    func getBg() -> GKEntity?{
+        for entity in entities{
+            if let _ = entity.component(ofType: UpdateBackgroundComponent.self){
+                return entity
+            }
+        }
+        return nil
+    }
+    
     func update(_ deltaTime: CFTimeInterval){
         
         for componentSystem in componentSystems{
             componentSystem.update(deltaTime: deltaTime)
         }
+        
         
         for entity in toRemove{
             
@@ -67,6 +80,8 @@ class EntityManager {
                 componentSystem.removeComponent(foundIn: entity)
             }
         }
+        
+        getBg()?.update(deltaTime: deltaTime)
         toRemove.removeAll()
     }
     

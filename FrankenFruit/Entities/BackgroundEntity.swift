@@ -10,25 +10,24 @@ import GameplayKit
 import SpriteKit
 class BackgroundEntity : GKEntity{
     var backgroundNodeArray = [SKSpriteNode]()
-    var combinedNode : SKSpriteNode
     unowned var scene : SKScene
     unowned var obstacleManager : ObstacleManager
+    var index = 0
     
     init(bgImage : UIImage, scene : SKScene, obstacleManager : ObstacleManager){
         self.scene = scene
-        self.combinedNode = SKSpriteNode()
         self.obstacleManager = obstacleManager
         super.init()
         setupInitialBackground(image: bgImage)
-        let renderComponent = RenderComponent(node: combinedNode)
-        self.addComponent(renderComponent)
-        combinedNode.anchorPoint = .zero
-        combinedNode.position = .zero
-        combinedNode.zPosition = -10
-        let stateMachineComponent = StateMachineComponent(states: [SlideState(entity: self, obstacleManager: obstacleManager),StationaryState(entity: self)])
+        for node in backgroundNodeArray{
+            scene.addChild(node)
+            node.zPosition = -1
+        }
+        let stateMachineComponent = StateMachineComponent(states: [SlideState(entity: self, obstacleManager: obstacleManager, nodes : backgroundNodeArray),StationaryState(entity: self)])
         self.addComponent(stateMachineComponent)
         stateMachineComponent.enterInitialState()
-        
+        let updateComponent = UpdateBackgroundComponent(bg: self, frame : scene.frame)
+        addComponent(updateComponent)
         
     }
     
@@ -42,7 +41,6 @@ class BackgroundEntity : GKEntity{
             spriteNode.anchorPoint = .zero
             spriteNode.position.x = scene.frame.width * CGFloat(i)
             backgroundNodeArray.append(spriteNode)
-            combinedNode.addChild(spriteNode)
         }
     }
 }

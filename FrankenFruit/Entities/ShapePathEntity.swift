@@ -49,7 +49,7 @@ class ShapePathEntity : GKEntity{
         previousPathNodes.append(currentPathNodes[currentPathNodes.count-1])
         currentPathNodes = [SKShapeNode]()
         while lastX < genX * 2{
-            var newX = obstacleManager.randomComponent.randomIn(obstacleManager.gameplayConfiguration.segmentWidth.lower, obstacleManager.gameplayConfiguration.segmentWidth.upper) + lastX
+            var newX = obstacleManager.randomComponent.randomIn(Int(obstacleManager.gameplayConfiguration.segmentWidth.lower), Int(obstacleManager.gameplayConfiguration.segmentWidth.upper)) + lastX
             if newX > genX * 2{
                 newX = genX * 2
             }

@@ -17,7 +17,7 @@ class GameViewController: UIViewController {
         let scene = GameScene(size: CGSize(width: 812, height: 375))
         scene.anchorPoint = CGPoint(x: 0, y: 0)
         let skView = view as! SKView
-        scene.backgroundColor = UIColor.red
+        scene.backgroundColor = UIColor.black
         scene.scaleMode = .aspectFill
         skView.presentScene(scene)
         skView.showsFPS = true

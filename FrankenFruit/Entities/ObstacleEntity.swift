@@ -13,6 +13,10 @@ class ObstacleEntity : GKEntity
 {
     var node : SKSpriteNode
     var bufferNode : SKSpriteNode
+    var rotation : CGFloat = 0
+    var size : CGSize?
+    var bufferSize : CGSize?
+    var position : CGPoint?
     init(obstacleManager : ObstacleManager){
         node = SKSpriteNode()
         bufferNode = SKSpriteNode()

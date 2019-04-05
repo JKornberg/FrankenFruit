@@ -18,6 +18,7 @@ class GameScene: SKScene {
     private var lastUpdateTime : TimeInterval = 0
     
     override func sceneDidLoad() {
+        self.physicsWorld.gravity = CGVector(dx: 0, dy: -6)
         entityManager = EntityManager(scene : self )
         obstacleManager = ObstacleManager(entityManager: entityManager)
 
@@ -27,19 +28,14 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         self.physicsWorld.contactDelegate = obstacleManager
-        let cameraXOffset = abs((self.frame.width - (UIScreen.main.bounds.width * self.frame.height / UIScreen.main.bounds.height) ) / 2) + self.frame.width/2
-        createCamera(cameraXOffset : cameraXOffset)
+        let cameraEntity = CameraEntity(scene: self)
+        entityManager.add(cameraEntity)
+        self.camera=cameraEntity.camera
         let background = BackgroundEntity(bgImage: UIImage(named: "FarBg")!, scene: self, obstacleManager: obstacleManager)
         entityManager.add(background)
-        let player = PlayerEntity()
-        let playerNode = player.component(ofType: RenderComponent.self)
+        let playerNode = playerEntity.component(ofType: RenderComponent.self)
         playerNode!.node.position = CGPoint(x: self.frame.width-500, y: self.frame.midY)
-        entityManager.add(player)
-        //Slanted obstacle demo
-//        let slantedObstacle = SlantedWallEntity(angle: CGFloat.pi/6)
-//        slantedObstacle.node.position = CGPoint(x: 400, y: self.frame.midY)
-//        entityManager.add(slantedObstacle)
-//        print("Frame width: \(self.frame.width)")
+        entityManager.add(playerEntity)
 
     }
     
@@ -57,13 +53,5 @@ class GameScene: SKScene {
         flyComponent.didPress()
     }
     
-    func createCamera(cameraXOffset : CGFloat){
-        let camera = SKCameraNode()
-        camera.position.x += cameraXOffset
-        camera.position.y += self.frame.height/2
-        self.addChild(camera)
-        self.camera = camera
-
-    }
     
 }

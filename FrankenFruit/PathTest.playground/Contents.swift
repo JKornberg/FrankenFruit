@@ -1,3 +1,4 @@
+
 import UIKit
 import SpriteKit
 import CoreGraphics
@@ -26,7 +27,7 @@ class DrawPath : UIView{
         //make rectangle vertical rectangle
         let obs = obstacle.cgPath
         let buffer = obs.copy(strokingWithWidth: 50, lineCap: .butt, lineJoin: .miter, miterLimit: 100/70)
-
+        
         //make slanted shape
         var transform = CGAffineTransform(rotationAngle: CGFloat.pi/4)
         let slantedPath = CGPath(rect: CGRect(x: 300, y: -80, width: 200, height: 30), transform: &transform)
@@ -60,16 +61,13 @@ class DrawPath : UIView{
         context.addPath(slantedPath)
         context.closePath()
         context.fillPath()
-    
-
-        print("hi")
+        
         print(strokedPath.intersects(path: strokedPath2))
-
-
+        
+        
     }
 }
 
-let view = DrawPath(frame: CGRect(x: 0, y: 0, width: 812, height: 375))
 
 
 class DrawCG : UIView{
@@ -79,32 +77,16 @@ class DrawCG : UIView{
         //setup horizontal bezier path
         
         let path = UIBezierPath()
-        path.move(to: CGPoint(x: 0, y: view.frame.midY))
-        path.addLine(to: CGPoint(x: 200, y: 0))
-        path.addLine(to: CGPoint(x: 800, y: view.frame.height))
-        let cgPath = path.cgPath
-        let strokedPath = cgPath.copy(strokingWithWidth: 40, lineCap: .butt, lineJoin: .miter, miterLimit: 10)
-
-
-        //context.addPath(strokedPath)
-        //context.setFillColor(UIColor.white.cgColor)
-        //context.fillPath()
+        path.move(to: .zero)
+        path.addLine(to: CGPoint(x: cgView.frame.midX, y: cgView.frame.height))
+        let strokedPath = path.cgPath.copy(strokingWithWidth: 40, lineCap: .butt, lineJoin: .miter, miterLimit: 10)
         
-        let myRect = SKSpriteNode(color: UIColor.blue, size: CGSize(width: 100, height: 500))
-        myRect.position = CGPoint(x: 300, y: view.frame.midY)
-        let rectPath = CGPath(rect: myRect.frame, transform: nil)
-        
-        let path2 = CGMutablePath()
-        path2.move(to: CGPoint(x: 0, y: view.frame.midY))
-        path2.addLine(to: CGPoint(x: 200, y: 0))
-        path2.addLine(to: CGPoint(x: 800, y: view.frame.height))
-        
-        let strokedPath2 = strokedPath.copy()
-
-        print(strokedPath.intersects(path: strokedPath2!))
+        let shapeNode = SKSpriteNode(color: .orange, size: CGSize(width: 100, height: 100))
+        shapeNode.position = CGPoint(x: cgView.frame.midX, y: 0)
+        let rectPath = CGPath(rect: shapeNode.frame, transform: nil)
+        print(strokedPath.intersects(path: rectPath))
     }
 }
 
 let cgView = DrawCG(frame: CGRect(x: 0, y: 0, width: 812, height: 375))
-
 

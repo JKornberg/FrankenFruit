@@ -17,7 +17,7 @@ class TapFlyComponent : GKComponent {
     }
     func didPress(){
         node.physicsBody!.velocity.dy = 0
-        node.physicsBody!.applyImpulse(CGVector(dx: 0, dy: 55))
+        node.physicsBody!.applyImpulse(CGVector(dx: 0, dy: 20))
     }
     
     func didLetGo(){
